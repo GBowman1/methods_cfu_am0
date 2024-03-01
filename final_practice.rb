@@ -5,35 +5,74 @@
 
 
 # 1: Write a method named greeting that returns a string with a general greeting. 
+def greeting(name)
+    puts "Hello there, #{name}!"
+end
 
+puts bob_greeting = greeting("Bob")
+puts john_greeting = greeting("John")
 # What is the return value of your method?
+#printed string of "Hello there," + inputed name
 # How many arguments did you pass your method?
+# 1 parameter of "name"
 
 
 # 2: Write a method named custom_greeting that returns a greeting WITH a specific name.
-
+def custom_greeting(name)
+    puts "How are you doing today, #{name}"
+end
+puts frank_greeting = custom_greeting("Frank")
+puts mike_greeting = custom_greeting("Mike")
 # What is the return value of your method?
+# printed string of "How are you doing today," + name
 # How many arguments did you pass your method?
+# 1 parameter of "name"
 # What data type was your argument(s)?
-
+# it is a string of the name
 
 # 3: Write a method named greet_person that takes in 3 strings, a first, middle, and last name, and returns a sentence with the full name.
+def greet_person(first,middle,last)
+    puts "Greetings, #{first} #{middle} #{last}"
+end
+
+puts garrett_greeting = greet_person("Garrett", "Reed", "Bowman")
 
 # What is the return value of your method?
+#returns a string containing first, middle, and last name that was inpout
 # How many arguments did you pass your method?
+# 3
 # What data type was your argument(s)?
+# Strings
 
 
 # 4: Write a method named square that takes in one integer, and returns the square of that integer.
 # Bonus: Print a sentence that interpolates the return value of your square method.
 
+def square(num)
+    squared_num = num * num
+    puts "#{num} squared is #{squared_num}"
+end
+
+puts good_square = square(4)
 # What is the return value of your method?
+# Method returned squared value of arguement
 # How many arguments did you pass your method?
+# only 1 is needed to square
 # What data type was your argument(s)?
+#integers
 
 
 # 5: Write a method named check_stock that satisfies the following interaction pattern:
 # Hint: You will only write one check_stock method that checks the quantity and then prints the corresponding statement.
+def check_stock(num,item)
+    if num >= 4
+        puts "#{item} is stocked"
+    elsif num == 0
+        puts "#{item} - OUT of stock"
+    else
+        puts "#{item} - runnning LOW"
+    end
+end
 
 check_stock(4, "Coffee");
 # => "Coffee is stocked"
